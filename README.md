@@ -2,7 +2,15 @@
 
 ## Amazon Kendra setup
 
+![image](./images/createindex.png)
 
+![image](./images/createindex2.png)
+
+![image](./images/createindex3.png)
+
+![image](./images/createindex4.png)
+
+![image](./images/createindex5.png)
 
 ## AWS CLI invocation
 
