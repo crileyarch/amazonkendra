@@ -2,41 +2,79 @@
 
 ## Amazon Kendra setup
 
+Amazon Kendra requires setting up an index that will provide an endpoint for performing queries. First we select *Create Index*
+
 ![image](./images/createindex.png)
+
+We then provide an index name, description (optional) and role that has cloudwatch / S3 access. Selecting an existing role here.
 
 ![image](./images/createindex2.png)
 
+For Access Control settings, we selected *No*
+
 ![image](./images/createindex3.png)
+
+For Provisioning editions settings, we selected *Developer*
 
 ![image](./images/createindex4.png)
 
+Amazon Kendra will then create an index which will take a few minutes.
+
 ![image](./images/createindex5.png)
+
+Once complete, the index will show *Created*.
 
 ![image](./images/createindex6.png)
 
+The next step is to create one or more data sources for the index. The S3 data connector will be used.
+
 ![image](./images/createds.png)
+
+Under Define attributes, a data source name is created.
 
 ![image](./images/createds2.png)
 
+Under Configure settings, the S3 bucket that will be used is identified.
+
 ![image](./images/createds3.png)
+
+Under Review and create, we can select Create. 
 
 ![image](./images/createds4.png)
 
+The data source summary will show when it is completed. 
+
 ![image](./images/createds5.png)
+
+Selecting Sync Now to have Amazon Kendra Syncing-crawl and Syncing-index. 
 
 ![image](./images/createds6.png)
 
+In the first attempt, S3 access has not been specified in the role causing a failure. 
+
 ![image](./images/createds7.png)
 
-![image](./images/createds8.png)
-
-![image](./images/createds9.png)
-
-![image](./images/createds10.png)
+Accessing the role and updating its privileges to allow S3 access is performed by attaching a managed policy. 
 
 ![image](./images/iam.png)
 
+Within the Amazon Kendra console, we select the Sync Now button to try again.
+
+![image](./images/createds8.png)
+
+This will restart the Syncing-crawl effort.
+
+![image](./images/createds9.png)
+
+With the update IAM role, the process complete successfully.
+
+![image](./images/createds10.png)
+
+Selection of the Search Console in Amazon Kendra provides the following interface.
+
 ![image](./images/kendra.png)
+
+Entering HPI (history of present illness) into the Query box correctly selects a PDF with the appropriate information.
 
 ![image](./images/kendra2.png)
 
