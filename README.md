@@ -1,4 +1,4 @@
-# Amazon Kendra example search Medical Journals
+# Amazon Kendra example search of Medical Journals
 
 ## Amazon Kendra setup
 
