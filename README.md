@@ -11,6 +11,7 @@ through the use of the AWS CLI / APIs.
 
 The following CLI will query Amazon Kendra for the indicies that exist. We need to be able to get the index id in order to perform a Natural Language Query.
 
+```
 $ aws kendra list-indices --profile nvirginia
 { 
     "IndexConfigurationSummaryItems": [
@@ -24,13 +25,17 @@ $ aws kendra list-indices --profile nvirginia
         }
     ]
 }
+```
 
 Once we have the index id, we can use the following command to perform a query and then examine the results. 
 
+```
 $ aws kendra query --index-id 3a9636ff-f2fb-4006-ae1b-6cc6a7525b35 --query-text "patient behaviors" --profile nvirginia
+```
 
 The results returned look like the following showing what is available based on the query. 
 
+```
 {
     "QueryId": "dc2b9c29-1c51-44f7-ad70-0470b2c2a2f4",
     "ResultItems": [
@@ -276,3 +281,4 @@ The results returned look like the following showing what is available based on 
     "FacetResults": [],
     "TotalNumberOfResults": 4
 }
+```
