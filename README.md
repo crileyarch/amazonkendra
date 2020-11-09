@@ -38,6 +38,8 @@
 
 ![image](./images/kendra.png)
 
+![image](./images/kendra2.png)
+
 ## AWS CLI invocation
 
 Once the Amazon Kendra index and data source has been created and documents crawled/scanned, it is time to invoke. This can be done via the Search mechanism directly in Amazon Kendra or 
